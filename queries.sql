@@ -1,3 +1,4 @@
+
 SELECT *
 FROM animals
 WHERE name ~ '[A-Za-z]+mon';
