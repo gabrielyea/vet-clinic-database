@@ -1,17 +1,38 @@
-/*Matches animals that end in mon*/
 
 SELECT *
 FROM animals
 WHERE name ~ '[A-Za-z]+mon';
 
-/*Matches animals between 2016 and 2019*/
-SELECT *
+SELECT name
 FROM animals
-WHERE date_of_birth > '1/1/2016' 
-AND date_of_birth < '1/1/2019';
+WHERE date_of_birth 
+BETWEEN '1-1-2016' 
+AND '12-31-2019';
 
-/*Matches animals neutered with less than 3 escapes*/
-SELECT *
+SELECT name
 FROM animals
 WHERE neutered = TRUE
 AND escape_attempts < 3;
+
+SELECT date_of_birth
+FROM animals
+WHERE name = 'Agumon'
+OR name = 'Pikachu';
+
+SELECT name, escape_attempts
+FROM animals
+WHERE weight_kg > 10.5;
+
+SELECT *
+FROM animals
+WHERE neutered;
+
+SELECT *
+FROM animals
+WHERE NOT name = 'Gabumon';
+
+SELECT *
+FROM animals
+WHERE weight_kg
+BETWEEN 10.4 
+AND 17.3;
