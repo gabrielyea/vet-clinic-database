@@ -99,4 +99,20 @@ FROM animals
 WHERE escape_attempts = 0
 
 /* Avarage weiht */
-SELECT AVG(weight_kg) FROM public.animals; 
+SELECT AVG(weight_kg) FROM animals; 
+
+/* Total escape attempts by neutered */
+SELECT neutered, SUM (escape_attempts)
+FROM animals
+GROUP BY neutered;
+
+/* MAX and MIN weight by species */
+SELECT species, MIN(weight_kg), MAX(weight_kg)
+FROM animals
+GROUP BY species; 
+
+/* AVG escape attempts between dates */
+SELECT species, AVG(escape_attempts)
+FROM animals
+WHERE date_of_birth BETWEEN 'jan/01/1990' AND 'DEC/31/2000'
+GROUP BY species; 
