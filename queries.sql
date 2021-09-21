@@ -42,7 +42,7 @@ AND 17.3;
 BEGIN;
 
 ALTER TABLE
-public.animals
+animals
 DROP COLUMN species;
 
 SELECT * FROM animals;
@@ -53,11 +53,50 @@ SELECT * FROM animals;
 
 /* Set species to pokemons or digimons */
 BEGIN;
-UPDATE public.animals
+UPDATE animals
 SET species = 'digimon'
 WHERE name ~'[A-Za-z]mon';
 
-UPDATE public.animals
+UPDATE animals
 SET species = 'pokemon'
 WHERE species IS NULL;
 COMMIT;
+
+/* Delete animals and rollback changes with no commit */
+BEGIN
+DELETE FROM animals
+ROLLBACK
+
+
+/* Big transaction */
+BEGIN;
+
+DELETE FROM animals
+WHERE date_of_birth > 'jan/01/2022';
+
+SAVEPOINT save1;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1;
+
+ROLLBACK TO save1;
+
+UPDATE animals
+SET weight_kg = weight_kg * -1
+WHERE weight_kg < 0;
+
+SELECT * FROM animals;
+
+COMMIT; 
+
+/* Total animals */
+SELECT COUNT (*)
+FROM animals
+
+/* Total animals that never escpaed */
+SELECT COUNT (*)
+FROM animals
+WHERE escape_attempts = 0
+
+/* Avarage weiht */
+SELECT AVG(weight_kg) FROM public.animals; 
