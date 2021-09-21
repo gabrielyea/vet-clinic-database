@@ -36,3 +36,18 @@ FROM animals
 WHERE weight_kg
 BETWEEN 10.4 
 AND 17.3;
+
+
+/* Transaction, drop species from and animals and then rollback changes */
+BEGIN;
+
+ALTER TABLE
+public.animals
+DROP COLUMN species;
+
+SELECT * FROM animals;
+
+ROLLBACK;
+
+SELECT * FROM animals; 
+
