@@ -63,9 +63,9 @@ WHERE species IS NULL;
 COMMIT;
 
 /* Delete animals and rollback changes with no commit */
-BEGIN
+BEGIN;
 DELETE FROM animals
-ROLLBACK
+ROLLBACK;
 
 
 /* Big transaction */
@@ -91,12 +91,12 @@ COMMIT;
 
 /* Total animals */
 SELECT COUNT (*)
-FROM animals
+FROM animals;
 
 /* Total animals that never escpaed */
 SELECT COUNT (*)
 FROM animals
-WHERE escape_attempts = 0
+WHERE escape_attempts = 0;
 
 /* Avarage weiht */
 SELECT AVG(weight_kg) FROM animals; 
