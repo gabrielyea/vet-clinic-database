@@ -51,3 +51,13 @@ ROLLBACK;
 
 SELECT * FROM animals; 
 
+/* Set species to pokemons or digimons */
+BEGIN;
+UPDATE public.animals
+SET species = 'digimon'
+WHERE name ~'[A-Za-z]mon';
+
+UPDATE public.animals
+SET species = 'pokemon'
+WHERE species IS NULL;
+COMMIT;
