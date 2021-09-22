@@ -46,3 +46,8 @@ INSERT INTO owners (full_name,age)
 INSERT INTO owners (full_name,age)
 	VALUES ('Jodie Whittaker',38);
 
+INSERT INTO public.species ("name")
+	VALUES ('Pokemon');
+	
+INSERT INTO public.species ("name")
+	VALUES ('Digimon');
