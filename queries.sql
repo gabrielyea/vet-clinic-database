@@ -185,4 +185,4 @@ FROM owners
 JOIN animals
 ON owners.id = animals.owner_id
 group by owners.full_name 
-order by count(*) desc limit 1
+order by count(*) desc limit 1;
