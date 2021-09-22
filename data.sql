@@ -46,8 +46,36 @@ INSERT INTO owners (full_name,age)
 INSERT INTO owners (full_name,age)
 	VALUES ('Jodie Whittaker',38);
 
-INSERT INTO public.species ("name")
+INSERT INTO species ("name")
 	VALUES ('Pokemon');
 	
-INSERT INTO public.species ("name")
+INSERT INTO species ("name")
 	VALUES ('Digimon');
+
+UPDATE animals
+	SET species_id=1
+	WHERE id=22;
+UPDATE animals
+	SET species_id=1
+	WHERE id=17;
+UPDATE animals
+	SET species_id=2
+	WHERE id=20;
+UPDATE animals
+	SET species_id=2
+	WHERE id=23;
+UPDATE animals
+	SET species_id=1
+	WHERE id=15;
+UPDATE animals
+	SET species_id=2
+	WHERE id=16;
+UPDATE animals
+	SET species_id=1
+	WHERE id=21;
+UPDATE animals
+	SET species_id=2
+	WHERE id=18;
+UPDATE animals
+	SET species_id=1
+	WHERE id=14;
