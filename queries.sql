@@ -37,6 +37,7 @@ WHERE weight_kg
 BETWEEN 10.4 
 AND 17.3;
 
+/*---------------TRANSACTIONS ------------------*/
 
 /* Transaction, drop species from and animals and then rollback changes */
 BEGIN;
@@ -116,6 +117,8 @@ SELECT species, AVG(escape_attempts)
 FROM animals
 WHERE date_of_birth BETWEEN 'jan/01/1990' AND 'DEC/31/2000'
 GROUP BY species; 
+
+/*--------------MULTIPLE QUERIES ------------------*/
 
 /* Animals owned by melody pond */
 SELECT 
