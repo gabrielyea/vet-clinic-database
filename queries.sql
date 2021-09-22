@@ -121,7 +121,6 @@ GROUP BY species;
 SELECT 
 animals.name,
 owners.full_name 
-
 FROM animals
 JOIN owners ON owners.id = animals.owner_id
 where owners.full_name = 'Melody Pond';
@@ -130,7 +129,6 @@ where owners.full_name = 'Melody Pond';
 SELECT 
 animals.name,
 species.name
-
 FROM animals
 JOIN species ON species.id = animals.species_id 
 where species.name = 'Pokemon';
@@ -148,7 +146,6 @@ ON animals.owner_id = owners.id
 SELECT 
 species.name,
 count(animals)
-
 FROM animals
 JOIN species 
 ON animals.species_id = species.id
