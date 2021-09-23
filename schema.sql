@@ -46,7 +46,7 @@ CONSTRAINT specializations_fk FOREIGN KEY (vet_id) REFERENCES vets(id) ON DELETE
 CONSTRAINT specializations_fk_1 FOREIGN KEY (species_id) REFERENCES species(id) ON DELETE RESTRICT ON UPDATE CASCADE
 ); 
 
-CREATE TABLE public.visits (
+CREATE TABLE visits (
 "date" date NULL,
 vet_id int NULL,
 animal_id int NULL,
