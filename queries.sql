@@ -186,3 +186,11 @@ JOIN animals
 ON owners.id = animals.owner_id
 group by owners.full_name 
 order by count(*) desc limit 1;
+
+/* Last animals seen by william */
+SELECT visits.date, animals.name, vets."name"
+FROM visits
+JOIN animals  ON visits.animal_id = animals.id 
+JOIN vets ON vets.id = visits.vet_id 
+where vets."name" = 'William Tatcher'
+order by visits."date" desc limit 1; 
