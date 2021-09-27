@@ -57,3 +57,5 @@ CONSTRAINT visits_fk FOREIGN KEY (animal_id) REFERENCES animals(id) ON DELETE CA
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 CREATE INDEX visits_animal_id_idx ON public.visits (animal_id); 
+CREATE INDEX visits_vet_id_idx ON public.visits (vet_id); 
+CREATE INDEX owners_email_idx ON public.owners (email); 
