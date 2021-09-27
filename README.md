@@ -15,8 +15,15 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 👤 **Gabriel Rendon**
 
-- GitHub: [@gabrielyea ](https://github.com/gabrielyea )
+- GitHub: [@gabrielyea ](https://github.com/gabrielyea)
 
+👤 **Rhyine Stewart**
+
+- GitHub: [@the-catalyst ](https://github.com/the-catalystmc)
+
+👤 **Ricardo R.**
+
+- GitHub: [@Ricardo9000 ](https://github.com/Richie9000)
 
 ## 🤝 Contributing
 
