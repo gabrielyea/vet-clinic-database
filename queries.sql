@@ -264,3 +264,12 @@ WHERE vets."name" = 'Maisy Smith'
 GROUP BY  species."name"
 ORDER BY COUNT(visits.animal_id ) DESC LIMIT 1;
 
+/* Optimized query 1 */
+EXPLAIN ANALYZE SELECT animal_id FROM visits WHERE animal_id = 4;
+
+/* Optimized query 2 */
+EXPLAIN ANALYZE SELECT vet_id FROM visits WHERE vet_id = 2;
+
+/* Optimized query 3 */
+EXPLAIN ANALYZE SELECT id FROM owners WHERE email = 'owner_18327@gmail.com';
+
