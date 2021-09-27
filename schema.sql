@@ -55,4 +55,4 @@ CONSTRAINT visits_fk_1 FOREIGN KEY (vet_id) REFERENCES vets(id) ON DELETE CASCAD
 CONSTRAINT visits_fk FOREIGN KEY (animal_id) REFERENCES animals(id) ON DELETE CASCADE ON UPDATE CASCADE
 ); 
 
-CREATE INDEX visits_animal_id_idx ON public.visits (animal_id); 
+
